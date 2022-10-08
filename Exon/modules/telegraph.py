@@ -38,7 +38,7 @@ r = telegraph.create_account(short_name=babe)
 auth_url = r["auth_url"]
 
 
-@register(pattern="^/t(gm|gt) ?(.*)")
+@register(pattern="^/t(m|g) ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -47,7 +47,7 @@ async def _(event):
         start = datetime.now()
         r_message = await event.get_reply_message()
         input_str = event.pattern_match.group(1)
-        if input_str == "gm":
+        if input_str == "m":
             downloaded_file_name = await telethn.download_media(
                 r_message, TMP_DOWNLOAD_DIRECTORY
             )
@@ -74,7 +74,7 @@ async def _(event):
                     ),
                     link_preview=True,
                 )
-        elif input_str == "gt":
+        elif input_str == "g":
             user_object = await telethn.get_entity(r_message.sender_id)
             title_of_page = user_object.first_name  # + " " + user_object.last_name
             # apparently, all Users do not have last_name field
@@ -120,9 +120,9 @@ file_helpo = file_help.replace("_", " ")
 __help__ = """ 
 ᴛᴇʟᴇɢʀᴀᴘʜ:
 
-⍟ /tgm*:* `ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ `
+⍟ /tm*:* `ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ `
 
-⍟ /tgt*:* `ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ Link ᴏғ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ ` 
+⍟ /tg*:* `ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ Link ᴏғ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ ` 
  """
 
 __mod_name__ = "𝚃ᴇʟᴇɢʀᴀᴘʜ"
