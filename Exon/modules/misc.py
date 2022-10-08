@@ -329,8 +329,8 @@ def stats(update, context):
             status
             + "\n*ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + "\n\n[ɢɪᴛʜᴜʙ](https://github.com/KingAbishnoi/ExonRobot) | [ᴛᴇʟᴇɢʀᴀᴍ](https://t.me/AbishnoiMF)\n\n"
-            + f"「 ʙʏ[ᴀʙɪsʜɴᴏɪ](t.me/{AKBOSS}) 」\n",
+            + "\n\n[ɢɪᴛʜᴜʙ](https://github.com/) | [ᴛᴇʟᴇɢʀᴀᴍ](https://t.me/HUNTER_OP_BOT)\n\n"
+            + f"「 ʙʏ[є∂ιтн](t.me/{AKBOSS}) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -342,9 +342,9 @@ def stats(update, context):
                         "\n*ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + "\n\n⍙ [ɢɪᴛʜᴜʙ](https://github.com/KingAbishnoi/ExonRobot) | [ᴛᴇʟᴇɢʀᴀᴍ](https://t.me/AbishnoiMF)\n\n"
+                    + "\n\n⍙ [ɢɪᴛʜᴜʙ](https://github.com/) | [ᴛᴇʟᴇɢʀᴀᴍ](https://t.me/HUNTER_OP_BOT)\n\n"
                 )
-                + f"「 ʙʏ [ᴀʙɪsʜɴᴏɪ](t.me/{AKBOSS}) 」\n"
+                + f"「 ʙʏ [є∂ιтн](t.me/{AKBOSS}) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
